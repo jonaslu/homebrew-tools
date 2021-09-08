@@ -12,22 +12,22 @@ class Ain < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_mac_os_x86_64.tar.gz"
-      sha256 "d1b8c8707a2cd25cc4c9d4fb9a21370b523f894c33aabdeafa545e3d0ae49c19"
+      sha256 "05e85ea69bf4f763f7ec7538b5cc04b1fa34da8944aef9415d4e8798e7a8a608"
     end
     if Hardware::CPU.arm?
       url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_mac_os_arm64.tar.gz"
-      sha256 "42f85d3965cd2eee0cd4ee31ac464f1c57ee56dfbb34122c402ad7f3aadaf5b2"
+      sha256 "1f4ce19255686af8f73290b3d93b6ae36b0e23beb5da53d2b4fc4506b4d5c1da"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_linux_x86_64.tar.gz"
-      sha256 "9889024badd192e734dc3542d28341deb41bc0c8f23e405b27a2eff0bb5af3cb"
+      sha256 "73c001225014129166ce0626b6d5b18c1562a4b9433002dd40582ac82571ce0b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_linux_arm64.tar.gz"
-      sha256 "ecf41d3a62bd19372768af5d702ad9f9249514c749829c655a67add46a2e5e86"
+      sha256 "f2009ca17e4e44450b7e2b97efd9f0bde6189307d7a99ee6ceb22cef21e7b387"
     end
   end
 
