@@ -7,7 +7,6 @@ class Ain < Formula
   homepage "https://github.com/jonaslu/ain"
   version "1.1.0"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
