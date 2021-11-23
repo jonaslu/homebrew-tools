@@ -5,32 +5,44 @@
 class Ain < Formula
   desc "Ain is a terminal API client. It's an alternative to postman, paw or insomnia."
   homepage "https://github.com/jonaslu/ain"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_mac_os_x86_64.tar.gz"
-      sha256 "05e85ea69bf4f763f7ec7538b5cc04b1fa34da8944aef9415d4e8798e7a8a608"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_mac_os_arm64.tar.gz"
-      sha256 "1f4ce19255686af8f73290b3d93b6ae36b0e23beb5da53d2b4fc4506b4d5c1da"
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.0/ain_1.2.0_mac_os_arm64.tar.gz"
+      sha256 "ceda7668264220c344d2f5ccbd3525114b23661e1c9bbe21fe2181b56f4b616b"
+
+      def install
+        bin.install "ain"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.0/ain_1.2.0_mac_os_x86_64.tar.gz"
+      sha256 "a968ae17725b702a46aec16cc7feb521d806aa8421c91c71b1d9d1a456a8cda9"
+
+      def install
+        bin.install "ain"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_linux_x86_64.tar.gz"
-      sha256 "73c001225014129166ce0626b6d5b18c1562a4b9433002dd40582ac82571ce0b"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jonaslu/ain/releases/download/v1.1.0/ain_1.1.0_linux_arm64.tar.gz"
-      sha256 "f2009ca17e4e44450b7e2b97efd9f0bde6189307d7a99ee6ceb22cef21e7b387"
-    end
-  end
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.0/ain_1.2.0_linux_arm64.tar.gz"
+      sha256 "c53d2a22a88276f6f54cb7952a23ec8e5e77193f345fe9797233fd60484b5702"
 
-  def install
-    bin.install "ain"
+      def install
+        bin.install "ain"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.0/ain_1.2.0_linux_x86_64.tar.gz"
+      sha256 "66844173d8202ee50f32d166a99051debf0b8ac99cab9c3a704f1a7497547ad7"
+
+      def install
+        bin.install "ain"
+      end
+    end
   end
 end
