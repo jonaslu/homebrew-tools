@@ -5,21 +5,21 @@
 class Ain < Formula
   desc "Ain is a terminal API client. It's an alternative to postman, paw or insomnia."
   homepage "https://github.com/jonaslu/ain"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jonaslu/ain/releases/download/v1.2.1/ain_1.2.1_mac_os_arm64.tar.gz"
-      sha256 "bf261315e7b5935ae3a262083e2b5d68a899074916f99b6138db986c627771fd"
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.2/ain_1.2.2_mac_os_arm64.tar.gz"
+      sha256 "ae350f4cc421c63d082e66f395dd2e1f235be8abc4e8ae392c7fee41f5bdf6b6"
 
       def install
         bin.install "ain"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.2.1/ain_1.2.1_mac_os_x86_64.tar.gz"
-      sha256 "7b74fbafa5aaf73f16d2ba6025654c0069419a62b312f04a6ab4e4eaf50ac02a"
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.2/ain_1.2.2_mac_os_x86_64.tar.gz"
+      sha256 "55a0fa51106387742a5d223e1f9e5c682e0864ef5ce28d25b5919619da921275"
 
       def install
         bin.install "ain"
@@ -29,16 +29,16 @@ class Ain < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jonaslu/ain/releases/download/v1.2.1/ain_1.2.1_linux_arm64.tar.gz"
-      sha256 "ae289d823432222541f4865bbc04221fbfe69788c7484e29acaf9edb989e20a1"
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.2/ain_1.2.2_linux_arm64.tar.gz"
+      sha256 "775046abba74e3213e2a1fad12e274850c9e321318bf89a39db0c1b7567418f5"
 
       def install
         bin.install "ain"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.2.1/ain_1.2.1_linux_x86_64.tar.gz"
-      sha256 "82fef4aee235c7bd50d0eda8b0026a46b2fe222ba7ed793eb7279b14d0e00b16"
+      url "https://github.com/jonaslu/ain/releases/download/v1.2.2/ain_1.2.2_linux_x86_64.tar.gz"
+      sha256 "88a08fd9995c892972814980dbaed0f68d5f27d7dc78e3d21841e4b47889afa2"
 
       def install
         bin.install "ain"
