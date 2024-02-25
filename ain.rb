@@ -5,21 +5,21 @@
 class Ain < Formula
   desc "Ain is a terminal API client. It's an alternative to postman, paw or insomnia."
   homepage "https://github.com/jonaslu/ain"
-  version "v1.4.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.4.0/ain_v1.4.0_mac_os_x86_64.tar.gz"
-      sha256 "12b87b6d1c670fde181a9e3791785fe3dcd39885dd19628b0eef09d425f06da4"
+    if Hardware::CPU.arm?
+      url "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_mac_os_arm64.tar.gz"
+      sha256 "1fcdd6f77d293929f611b1eb11451672252a384e3c0210764fbc61faf5d9775c"
 
       def install
         bin.install "ain"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jonaslu/ain/releases/download/v1.4.0/ain_v1.4.0_mac_os_arm64.tar.gz"
-      sha256 "a86a1eeaaecf0aba92ba24727e48deed2e631902f9479c0d26fc788321848aa0"
+    if Hardware::CPU.intel?
+      url "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_mac_os_x86_64.tar.gz"
+      sha256 "0e3080977590013f4d4f8dff557eddd845defc718809ed7f7b1e8cd9fdd82596"
 
       def install
         bin.install "ain"
@@ -29,16 +29,16 @@ class Ain < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jonaslu/ain/releases/download/v1.4.0/ain_v1.4.0_linux_arm64.tar.gz"
-      sha256 "38eb1fa8dadde943f8092fbccba97ae93fdbdb7adca23a1ea490fcf4760cf0a5"
+      url "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_linux_arm64.tar.gz"
+      sha256 "4d4552d39bb96d13f725cbd0331991369f8cbce8764321571f44b36b06f01f68"
 
       def install
         bin.install "ain"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jonaslu/ain/releases/download/v1.4.0/ain_v1.4.0_linux_x86_64.tar.gz"
-      sha256 "d54b875d738112488cc8678bc7d50752d4e3d8367e9d734445d6c86c8aa3a30c"
+      url "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_linux_x86_64.tar.gz"
+      sha256 "f5e80b7b9c72b6d9411215935261528afa559f57040bba87d8511b0a5d548ded"
 
       def install
         bin.install "ain"
